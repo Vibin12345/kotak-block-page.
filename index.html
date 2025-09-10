@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kotak Bank — Request Blocked</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    :root {
+      --kotak-red: #d71920;
+      --kotak-blue: #003d7c;
+      --bg: #0b1220;
+      --card: #0f172a;
+      --muted: #94a3b8;
+      --text: #e2e8f0;
+      --success: #16a34a;
+      --warning: #eab308;
+      --error: #ef4444;
+      --radius: 16px;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(215,25,32,.15), transparent),
+                  radial-gradient(900px 600px at 120% 10%, rgba(0,61,124,.15), transparent),
+                  var(--bg);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .card {
+      width: 100%;
+      max-width: 880px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      overflow: clip;
+      backdrop-filter: blur(6px);
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      background: linear-gradient(90deg, var(--kotak-red), var(--kotak-blue));
+      color: #fff;
+    }
+    .topbar img {
+      width: 36px; height: 36px; border-radius: 8px; background: #fff; object-fit: cover;
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.2);
+    }
+    .topbar h1 { font-size: 18px; line-height: 1; margin: 0; font-weight: 700; letter-spacing: .2px; }
+    .content { padding: 28px; display: grid; gap: 22px; }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-weight: 600; letter-spacing: .3px; text-transform: uppercase;
+      font-size: 12px; padding: 8px 12px; border-radius: 999px;
+      background: rgba(239, 68, 68, .1); color: #fecaca; border: 1px solid rgba(239, 68, 68, .35);
+      width: fit-content;
+    }
+    .title { font-size: clamp(22px, 3.2vw, 28px); margin: 0; }
+    .subtitle { color: var(--muted); margin-top: -6px; }
+
+    .grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+    @media (min-width: 720px) { .grid { grid-template-columns: 1.2fr .8fr; } }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+    .panel h3 { margin: 0 0 10px; font-size: 14px; color: #cbd5e1; letter-spacing: .3px; text-transform: uppercase; }
+    .panel p { margin: 6px 0; color: var(--text); }
+    .panel code { background: rgba(148,163,184,.15); padding: 2px 6px; border-radius: 6px; }
+
+    .kv { display: grid; grid-template-columns: 120px 1fr; row-gap: 8px; column-gap: 10px; }
+    .kv .k { color: var(--muted); }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px; }
+    .btn {
+      appearance: none; border: 1px solid rgba(255,255,255,0.14); background: #ffffff08; color: var(--text);
+      padding: 10px 14px; border-radius: 12px; font-weight: 600; cursor: pointer; transition: transform .05s ease, background .2s;
+    }
+    .btn:hover { background: #ffffff10; }
+    .btn:active { transform: translateY(1px); }
+    .btn.primary { border-color: transparent; background: linear-gradient(90deg, var(--kotak-red), var(--kotak-blue)); color: #fff; }
+
+    .foot {
+      border-top: 1px dashed rgba(148,163,184,.25);
+      padding: 14px 18px; font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; align-items: center; gap: 10px;
+    }
+    .foot .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+    .shield { display: inline-flex; align-items: center; gap: 8px; color: #c7d2fe; font-weight: 600; }
+    .shield svg { opacity: .9; }
+    a { color: #c7d2fe; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="page-title">
+    <div class="topbar" role="banner">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScFSyV7mkgEtMmsqK9pmOyZUTzqzer-E2-VA&s" alt="Kotak logo" />
+      <h1>Kotak Mahindra Bank — Security Gateway</h1>
+    </div>
+
+    <div class="content">
+      <span class="badge" aria-live="polite" aria-atomic="true">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 5v6h-2V7h2zm0 8v2h-2v-2h2z"/></svg>
+        Request Blocked
+      </span>
+
+      <h2 id="page-title" class="title">We protected your connection.</h2>
+      <p class="subtitle">Your request was blocked by Kotak Bank’s security systems (powered by Cloudflare) to keep our customers safe.</p>
+
+      <section class="grid" aria-label="Details and next steps">
+        <div class="panel" aria-labelledby="ref-title">
+          <h3 id="ref-title">Technical details</h3>
+          <div class="kv">
+            <div class="k">Reference ID</div>
+            <div class="v mono" id="ref">Loading…</div>
+            <div class="k">Timestamp</div>
+            <div class="v mono" id="ts">Loading…</div>
+            <div class="k">URL</div>
+            <div class="v mono" id="url">Loading…</div>
+          </div>
+          <p style="margin-top:12px; color: var(--muted); font-size: 12px;">Note: The Reference ID corresponds to the Cloudflare Ray ID for diagnostic purposes.</p>
+        </div>
+
+        <div class="panel" aria-labelledby="next-title">
+          <h3 id="next-title">What you can do</h3>
+          <ul>
+            <li>Make sure your browser is up to date and try again.</li>
+            <li>If you’re on a corporate network or VPN, contact your IT team.</li>
+            <li>If you believe this was an error, share the <strong>Reference ID</strong> and time with our support team.</li>
+          </ul>
+          <div class="actions">
+            <button class="btn primary" onclick="location.reload()" aria-label="Try again">Try again</button>
+            <a class="btn" href="/" aria-label="Go to homepage">Go to homepage</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="foot" role="contentinfo">
+      <span class="shield" aria-label="Protection notice">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l7 4v6c0 5-3.8 9.4-7 10-3.2-.6-7-5-7-10V6l7-4z"/></svg>
+        Protected by Kotak Security & Cloudflare
+      </span>
+      <span>
+        Ref: <span class="mono" id="ref2">—</span> • <span id="tz">IST</span>
+      </span>
+    </div>
+  </main>
+
+  <script>
+    // Best-effort client-side hints (Ray ID is typically injected by Cloudflare on default pages.
+    // On a Custom Page, it may be included via transform rules or server vars. We show a placeholder and timestamp.)
+    (function () {
+      const tsEl = document.getElementById('ts');
+      const urlEl = document.getElementById('url');
+      const refEls = [document.getElementById('ref'), document.getElementById('ref2')];
+      const tzEl = document.getElementById('tz');
+
+      // Timestamp in user’s locale
+      try {
+        const now = new Date();
+        tsEl.textContent = now.toLocaleString(undefined, { hour12: false });
+      } catch { tsEl.textContent = new Date().toISOString(); }
+
+      // URL
+      try { urlEl.textContent = location.href; } catch { urlEl.textContent = '—'; }
+
+      // Timezone label
+      try {
+        tzEl.textContent = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Local time';
+      } catch { tzEl.textContent = 'Local time'; }
+
+      // Reference ID (placeholder). If you can inject Ray ID via Transform Rules, set window.__RAY__ before this script.
+      const fallback = 'Unavailable';
+      const ray = (window.__RAY__ || '').toString().trim();
+      refEls.forEach(el => el.textContent = ray || fallback);
+    })();
+  </script>
+</body>
+</html>
