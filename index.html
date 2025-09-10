@@ -125,7 +125,7 @@
           <h3 id="ref-title">Technical details</h3>
           <div class="kv">
             <div class="k">Reference ID</div>
-            <div class="v mono" id="ref">Loading…</div>
+            <div class="v mono" id="ref">::RAY_ID::</div>
             <div class="k">Timestamp</div>
             <div class="v mono" id="ts">Loading…</div>
             <div class="k">URL</div>
@@ -155,7 +155,7 @@
         Protected by Kotak Security & Cloudflare
       </span>
       <span>
-        Ref: <span class="mono" id="ref2">—</span> • <span id="tz">IST</span>
+        Ref: <span class="mono" id="ref2">::RAY_ID::</span> • <span id="tz">IST</span>
       </span>
     </div>
   </main>
@@ -183,10 +183,7 @@
         tzEl.textContent = Intl.DateTimeFormat().resolvedOptions().timeZone || 'Local time';
       } catch { tzEl.textContent = 'Local time'; }
 
-      // Reference ID (placeholder). If you can inject Ray ID via Transform Rules, set window.__RAY__ before this script.
-      const fallback = 'Unavailable';
-      const ray = (window.__RAY__ || '').toString().trim();
-      refEls.forEach(el => el.textContent = ray || fallback);
+      // Reference ID is injected by Cloudflare via the ::RAY_ID:: token on the server side. No client-side logic needed here.
     })();
   </script>
 </body>
